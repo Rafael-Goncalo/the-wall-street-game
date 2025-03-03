@@ -6,16 +6,16 @@ class Game {
         this.gamePage = document.getElementById('game-page');
         this.gameOverFreeScreen = document.getElementById("game-over-free");
         this.gameOverBrokeScreen = document.getElementById("game-over-broke");
-        this.player = new Player(
-            this.gameScreen,
-            85,
-            400,
-            125,
-            180,
+        this.player = new Player(this.gameScreen,
+            0, // left
+            250, // top
+            80, // width
+            80, // height
             "./images/final-investor.png"
           );
-        this.height = 500; // size of the game screen
-        this.width = 500; // size of the game screen
+        this.height = 400; // size of the backgroun game screen
+        this.width = 400; // size of the backgroun game screen
+        this.obstacles = [new Obstacles(this.gameScreen)];
         this.positiveObstacles = []; // array of obst to loop thorough and show them
         this.negativeObstacles = [];
         // this.score = 0
@@ -51,5 +51,7 @@ gameLoop() { // to check the status of the game over if FREE/ BROKE
     }
     }
 }
-update() {}
+update() {
+    this.player.move()
+}
 }

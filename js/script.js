@@ -7,9 +7,33 @@ window.onload = function () {
 
     startButton.addEventListener("click", function () {
         ourNewGame = new Game(); //here we BIND the class Game of the game.js
-        startGame();
+        ourNewGame.start()
     });
   
+//keyboard event listeners // Move the Player
+  window.addEventListener("keydown", (event) => {
+    if (event.code === "ArrowUp") {
+      ourNewGame.player.directionY = -2;
+    } else if (event.code === "ArrowDown") {
+      ourNewGame.player.directionY = 2;
+    } else if (event.code === "ArrowLeft") {
+      ourNewGame.player.directionX = -2;
+    } else if (event.code === "ArrowRight") {
+      ourNewGame.player.directionX = 2;
+    }
+  });
+  // to stop the player of going up/ down/ right/ left
+  window.addEventListener("keyup", (e) => {
+    if (e.code === "ArrowUp") {
+      ourNewGame.player.directionY = 0;
+    } else if (e.code === "ArrowDown") {
+      ourNewGame.player.directionY = 0;
+    } else if (e.code === "ArrowLeft") {
+      ourNewGame.player.directionX = 0;
+    } else if (e.code === "ArrowRight") {
+      ourNewGame.player.directionX = 0;
+    }
+  });
 
  // ALL FUNCTIONS HERE:
 
