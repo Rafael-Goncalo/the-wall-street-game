@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <title>The Wall $treet Game</title>
+</head>
+<body>
+    <main>
+        <!-- game start page -->
+        <div id="game-intro">
+         
+            <h1>💰 The Wall $treet Game 💰</h1>
+            <h2>Investing in the Stock Market is one good way to reach financial freedom</h2>
+            <h2>End the game FREE by reaching 1.000.000$ or BROKE going to 0$</h2>
+  
+            <img src="./images/game-logo-black.png" alt="Game Logo img" />
+            <br />
+            <button id="start-button">Start Game</button>
+            <p>Instructions:</p>
+            <p>1. To make money seize oportunities.</p>
+            <p>2. To preserve your wealth avoid risks.</p>
+            <p>Hint: ✅ green icons ↑increase your wealth, ❌ red ↓decrease your wealth</p>
+            <p>Use these keys to move the investor</p>
+            <h2>⬆️ up ➡️ front ⬇️ down ⬅️ back</h2>
+            
+          </div>
+            
+          <div id="game-page">
+            <div>
+              <h1>💰 The Wall $treet Game 💰</h1>
+              <h2 id="wealth">Wealth: <span id="wealth-amount">1000</span>$</h2>
+              </div>
+            <!-- #game-screen is initially hidden using CSS style display: none -->
+            <div id="game-screen"></div>
+              
+          </div>
+    
+          <!-- #game-end-free is initially hidden using CSS style display: none -->
+          <div id="game-over-free">
+            <h1>Game Over... You Are FREE!</h1>
+            <img src="./images/game-over-free.png" alt="Game Over Free" />
+            <br />
+            <button id="restart-button">Try Again</button>
+          </div>
+
+         <!-- #game-end-free is initially hidden using CSS style display: none -->
+          <div id="game-over-broke">
+            <h1>Game Over... You Are BROKE...</h1>
+            <img src="./images/game-over-broke.png" alt="Game Over Broke" class="logo-img" />
+            <br />
+            <button id="restart-button">Try Again</button>
+          </div>
+
+    </main>
+    <script type="text/javascript" src="js/player.js"></script> 
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></scrip>
+    
+</body>
+</html>

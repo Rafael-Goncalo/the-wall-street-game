@@ -1,0 +1,126 @@
+/* color gold: rgb(234, 181, 22) */
+/* Font Family 'Times New Roman', for btn "Bolder" */
+
+body, html {
+  background-color: rgb(46, 106, 167);
+    text-align: center;
+    margin: 0px;
+    border: 0px; /* not applied here*/
+    padding: 0px;
+  }
+  div {
+    padding: 0px;
+} 
+  div img {
+    height: 300px;
+    width: 300px;
+  }
+
+  /* here starts the Start Page */
+  h1 {
+    background-color: rgb(234, 181, 22);
+    font-size: 45px;
+    border-radius: 0px;
+    /* these 3 attributes to squeeze the texts */ 
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+  }
+
+  h2 {
+    color:white;
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight:lighter;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 5px;
+    padding: 0px;
+  }
+
+  p {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    margin: 4px;
+    border: 0px; /* not applied here*/
+    padding: 0px; /* not applied here*/
+  }
+
+/* here ends the Start Page */
+
+/* here starts the Game Page */ 
+
+#game-page {
+    display: none; /* change to flex*/
+    width: 400px;
+    height: 400px;
+    padding: 20px 0px;
+    justify-content: center;
+  }
+  
+  #game-screen {
+    display: none;
+    align-content: center;
+    padding: 20px 0px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/background-image.png);
+    background-size: cover;
+    animation: slide 5s linear infinite;
+  }
+
+  #wealth {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black
+  }
+
+  #wealth-amount {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    color: black
+  }
+  
+  /* here ends the Game page */
+
+  /* HERE STARTS THE GAME OVER FREE */
+
+  #game-over-free {
+    padding: 0px;
+    display: none;  /*to hide the Game Over page*/
+  }
+  /* HERE STARTS THE GAME OVER FREE */
+
+  /* HERE STARTS THE GAME OVER BROKE */
+
+  #game-over-broke {
+    padding: 0px;
+    display: none;  /*to hide the Game Over page*/
+  }
+
+  /* HERE STARTS THE GAME OVER BROKE */
+
+  body button {
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: rgb(234, 181, 22);
+    color: black;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 0px;
+  }
+
+  /* @keyframes slide {
+    0% {
+      background-position: 0 -1000px;
+    }
+    95% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 50px;
+    }
+  } */
