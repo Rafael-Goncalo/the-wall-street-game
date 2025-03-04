@@ -52,15 +52,16 @@ body, html {
 
 /* here starts the Game Page */ 
 
-#game-page {
+#second-page-a {
+  background-color: rgb(46, 106, 167);
     display: none; /* change to flex*/
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 800px;
     padding: 20px 0px;
     justify-content: center;
   }
   
-  #game-screen {
+  #second-page-b {
     display: none;
     align-content: center;
     padding: 20px 0px;
@@ -86,7 +87,7 @@ body, html {
 
   /* HERE STARTS THE GAME OVER FREE */
 
-  #game-over-free {
+  #third-page-a {
     padding: 0px;
     display: none;  /*to hide the Game Over page*/
   }
@@ -94,7 +95,7 @@ body, html {
 
   /* HERE STARTS THE GAME OVER BROKE */
 
-  #game-over-broke {
+  #third-page-b {
     padding: 0px;
     display: none;  /*to hide the Game Over page*/
   }
