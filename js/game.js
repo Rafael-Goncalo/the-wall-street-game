@@ -6,7 +6,6 @@ class Game {
     this.secondPageB = document.getElementById("second-page-b"); //
     this.gameOverWin = document.getElementById("third-page-a"); // i/o gameOverFree
     this.gameOverLoss = document.getElementById("third-page-b"); // i/o gameOverBroke
-    console.log(this.gameOverLoss.style); // i/o thirdPageB
     this.wealthAmount = document.getElementById("wealth-amount"); // the car is lives
     this.player = new Player(
       this.secondPageB,
@@ -16,7 +15,7 @@ class Game {
       80, // height
       "./images/final-investor.png"
     );
-    this.height = 600; // bottom, size of the backgroun game screen
+    this.height = 650; // bottom, size of the backgroun game screen
     this.width = 800; // size of the backgroun game screen
     this.obstacles = [];
     this.positiveObstacles = [];
