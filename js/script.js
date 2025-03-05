@@ -1,7 +1,7 @@
 // handles all the eventListeners, everytime that you click or do something with the keyboard
 window.onload = function () {
     const startButton = document.getElementById("start-button");
-    const restartButton = document.getElementById("restart-button");
+    const restartButtons = document.querySelectorAll(".restart-buttons");
     let ourNewGame
   // ALL EVENTLISTENERS HERE:
 
@@ -9,9 +9,16 @@ window.onload = function () {
         ourNewGame = new Game(); //here we BIND the class Game of the game.js
         ourNewGame.start()
     });
+
+    restartButtons.forEach((button)=>{
+      button.addEventListener("click", () =>{
+        location.reload()
+      })
+    })
   
 //keyboard event listeners // Move the Player
   window.addEventListener("keydown", (event) => {
+    console.log("keydown", event.code)
     if (event.code === "ArrowUp") {
       ourNewGame.player.directionY = -4;
     } else if (event.code === "ArrowDown") {
@@ -24,6 +31,7 @@ window.onload = function () {
   });
   // to stop the player of going up/ down/ right/ left
   window.addEventListener("keyup", (e) => {
+    console.log("keyup", e.code)
     if (e.code === "ArrowUp") {
       ourNewGame.player.directionY = 0;
     } else if (e.code === "ArrowDown") {
