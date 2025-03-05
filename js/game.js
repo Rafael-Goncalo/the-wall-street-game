@@ -47,8 +47,10 @@ class Game {
     // METHOD. To check the status of the game over if FREE/ BROKE
     this.counter++;
     if (this.counter % 160 === 0) {
+        const obstacleType = ["positive", "negative"];
+        const randomIndex = Math.floor(Math.random() * obstacleType.length) 
       // didn't understand this part
-      this.obstacles.push(new Obstacle(this.secondPageB)); // ERROR here
+      this.obstacles.push(new Obstacle(this.secondPageB, obstacleType[randomIndex])); // ERROR here
     }
     // if (this.thirdPageA) {
     //   this.gameOver(); // gameOver is another method...?
@@ -73,7 +75,7 @@ class Game {
         i--;
         //dont forget to remove the img element from the html ???
         currentObstacle.element.remove();
-        this.wealth += 400000; // wealthAmount ??
+        this.wealth += currentObstacle.value; // wealthAmount ??
         this.wealthAmount.innerText = this.wealth;
         //after we subtract one life, we check if its zero
         if (this.wealth >= 1000000) { // wealthAmount
