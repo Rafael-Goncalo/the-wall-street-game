@@ -4,9 +4,9 @@ class Game {
     this.firstPage = document.getElementById("first-page"); // i/o gameIntroScreen
     this.secondPageA = document.getElementById("second-page-a"); // i/o gamePage
     this.secondPageB = document.getElementById("second-page-b"); //
-    this.thirdPageA = document.getElementById("third-page-a"); // i/o gameOverFree
-    this.gameOverWin = document.getElementById("third-page-b"); // i/o gameOverBroke
-    console.log(this.gameOverWin.style); // i/o thirdPageB
+    this.gameOverWin = document.getElementById("third-page-a"); // i/o gameOverFree
+    this.gameOverLoss = document.getElementById("third-page-b"); // i/o gameOverBroke
+    console.log(this.gameOverLoss.style); // i/o thirdPageB
     this.wealthAmount = document.getElementById("wealth-amount"); // the car is lives
     this.player = new Player(
       this.secondPageB,
@@ -103,7 +103,7 @@ class Game {
     //show the game over screen
 
     if (this.wealth <= 0) {
-      this.thirdPageA.style.display = "block";
+      this.gameOverLoss.style.display = "block";
     } else {
       this.gameOverWin.style.display = "block";
     }
